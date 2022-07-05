@@ -1,0 +1,84 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/resume-managment-tool/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/resume-managment-tool",
+        "index": "apps/resume-managment-tool/src/index.html",
+        "baseHref": "/",
+        "main": "apps/resume-managment-tool/src/main.tsx",
+        "polyfills": "apps/resume-managment-tool/src/polyfills.ts",
+        "tsConfig": "apps/resume-managment-tool/tsconfig.app.json",
+        "assets": [
+          "apps/resume-managment-tool/src/favicon.ico",
+          "apps/resume-managment-tool/src/assets"
+        ],
+        "styles": ["apps/resume-managment-tool/src/styles.scss"],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/resume-managment-tool/src/environments/environment.ts",
+              "with": "apps/resume-managment-tool/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "resume-managment-tool:build",
+        "hmr": true,
+        "proxyConfig": "apps/resume-managment-tool/proxy.conf.json"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "resume-managment-tool:build:development"
+        },
+        "production": {
+          "buildTarget": "resume-managment-tool:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/resume-managment-tool/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/resume-managment-tool"],
+      "options": {
+        "jestConfig": "apps/resume-managment-tool/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

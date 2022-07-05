@@ -1,0 +1,27 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "rootDir": ".",
+        "sourceMap": true,
+        "declaration": false,
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "target": "es2015",
+        "module": "esnext",
+        "lib": ["es2017", "dom"],
+        "skipLibCheck": true,
+        "skipDefaultLibCheck": true,
+        "baseUrl": ".",
+        "paths": {
+            "@resume-managment-tool/api-interfaces": [
+                "libs/api-interfaces/src/index.ts"
+            ],
+            "@resume-managment-tool/styles/all": ["libs/styles/src/lib/styles.scss"],
+            "variables": ["libs/styles/src/lib/_var.scss"],
+            "components": ["libs/styles/src/lib/components/components.scss"]
+        }
+    },
+    "exclude": ["node_modules", "tmp"]
+}

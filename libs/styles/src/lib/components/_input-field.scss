@@ -1,0 +1,67 @@
+$input-font-size: $font-size;
+$input-height: 32px;
+
+%form-field {
+    position: relative;
+    padding-top: $space-lg;
+    margin-bottom: $space-lg;
+}
+
+%input-field-normalize {
+    border: none;
+
+    &:focus-visible {
+        outline-offset: 0px;
+        outline: -webkit-focus-ring-color auto 0px;
+    }
+}
+
+%input-field {
+    @extend %input-field-normalize;
+
+    font-size: $input-font-size;
+    font-family: $primary-font;
+    width: 100%;
+    min-height: $input-height;
+    padding: $space-xs 0;
+    border-bottom: 1px solid $color-grey-light;
+    background-color: transparent;
+    color: $color-black;
+}
+
+%input-field-focus {
+    outline: none;
+    border-bottom: 1px solid $color-blue;
+}
+
+%input-field-disabled {
+    color: $color-grey-dark;
+}
+
+%input-field-error {
+    border-bottom-color: $color-orange;
+}
+
+%input-field-label {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: $space-xl;
+    color: $color-grey-darkest;
+    transition: transform 0.3s ease-out, font-size 0.3s ease-out;
+    pointer-events: none;
+    transform-origin: center;
+}
+
+%input-field-filled-focus-label {
+    font-size: $font-size-xs;
+    transform: translateY(-100%);
+}
+
+%input-field-filled-label {
+    color: $color-blue;
+}
+
+%input-field-disabled-label {
+    color: $color-grey;
+}

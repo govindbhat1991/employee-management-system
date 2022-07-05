@@ -1,0 +1,38 @@
+@import 'components';
+
+.form-field {
+    @extend %form-field;
+}
+
+.input-field {
+    @extend %input-field;
+
+    &[type='date'][value='']:not(:focus) {
+        color: transparent;
+    }
+
+    &:focus {
+        @extend %input-field-focus;
+    }
+
+    &.error {
+        @extend %input-field-error;
+    }
+
+    & ~ label {
+        @extend %input-field-label;
+    }
+
+    &:focus ~ label,
+    &.filled ~ label {
+        @extend %input-field-filled-focus-label;
+    }
+
+    &:focus ~ label {
+        @extend %input-field-filled-label;
+    }
+
+    &[disabled] ~ label {
+        @extend %input-field-disabled-label;
+    }
+}

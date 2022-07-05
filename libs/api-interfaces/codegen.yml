@@ -1,0 +1,23 @@
+overwrite: true
+schema: 'apps/api/src/app/graphql/schema.graphql.ts'
+generates:
+  libs/api-interfaces/src/lib/generated/graphql-types.ts:
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-react-apollo'
+    config:
+      reactApolloVersion: 2
+      withComponent: false
+      withHOC: false
+      withHooks: true
+      withMutationFn: true
+      immutableTypes: true
+      withRefetchFn: true
+      avoidOptionals: false
+      preResolveTypes: false
+      maybeValue: T | null | undefined
+      inputMaybeValue: T | null | undefined
+    hooks:
+      afterOneFileWrite:
+        - prettier --write

@@ -1,0 +1,27 @@
+@import 'variables';
+
+.list {
+    &__item {
+        display: flex;
+        background-color: $color-white;
+        padding: $space $space-xl;
+        border-radius: 0.8em;
+
+        &:not(:last-child) {
+            margin-bottom: $space;
+        }
+    }
+
+    &__item-content {
+        flex: 1;
+        margin-right: $space-lg;
+    }
+
+    &__item-toolbar {
+        margin-left: auto;
+
+        button:not(:last-child) {
+            margin-right: $space;
+        }
+    }
+}

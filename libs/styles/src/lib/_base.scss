@@ -1,0 +1,306 @@
+@import 'components';
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: $primary-font;
+    margin: 0;
+    min-height: 100vh;
+    background-color: $body-bg-color;
+    overflow: hidden;
+}
+
+.react-root#root {
+    height: 100%;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: $color-base;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+// Image fit cover
+img,
+video {
+    object-fit: cover;
+    font-family: 'object-fit: cover;';
+
+    &.center {
+        width: 100%;
+        height: 100%;
+        object-position: center;
+        font-family: 'object-fit: cover; object-position: center;';
+    }
+
+    &.left {
+        width: 100%;
+        height: 100%;
+        object-fit: none;
+        object-position: left center;
+        font-family: 'object-fit: cover; object-position: left;';
+    }
+
+    &.right {
+        width: 100%;
+        height: 100%;
+        object-fit: none;
+        object-position: right center;
+        font-family: 'object-fit: cover; object-position: right;';
+    }
+
+    &.bottom {
+        width: 100%;
+        height: 100%;
+        object-position: center bottom;
+        font-family: 'object-fit: cover; object-position: bottom;';
+    }
+}
+
+.container {
+    @if ($enable-container == true) {
+        max-width: $containers-max-width;
+    }
+
+    padding: 0 $gutter;
+    margin: 0 auto;
+}
+
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+
+    &:active {
+        outline: none;
+    }
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+// height
+.full-height {
+    height: 100%;
+}
+
+// positioning
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+// text basic color
+@each $colour, $value in $text-color {
+    .text-#{'' + $colour} {
+        color: $value;
+    }
+}
+
+// text align
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+// text transform
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-lowercase {
+    text-transform: lowercase;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+// font weight
+.font-normal {
+    font-weight: normal;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.font-bolder {
+    font-weight: 900;
+}
+
+.font-light {
+    font-weight: 300;
+}
+
+.font-thin {
+    font-weight: 100;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+// heading
+.heading,
+.subheading,
+.smallheading,
+.miniheading {
+    line-height: 1;
+}
+
+.heading {
+    font-size: $page-heading-font-size;
+}
+
+.page-heading {
+    font-size: $section-heading-font-size;
+}
+
+.sub-heading {
+    font-size: $sub-heading-font-size;
+}
+
+.small-heading {
+    font-size: $small-heading-font-size;
+}
+
+// images
+.image-container {
+    img {
+        display: block;
+        width: 100%;
+    }
+
+    &.image-cover {
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &.image-contain {
+        img {
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+.image-fluid {
+    width: 100%;
+    display: block;
+}
+
+.image-bordered {
+    border-radius: 8px;
+}
+
+img {
+    &:not([src]),
+    &[src=''] {
+        opacity: 0;
+    }
+}
+
+.image-center {
+    background-position: center;
+}
+
+.image-cover {
+    background-size: cover;
+}
+
+.image-contain {
+    background-size: contain;
+}
+
+// move this to somewhere else
+.react-tabs {
+    @extend %tabs;
+
+    &__tab-list {
+        @extend %tabs-list;
+    }
+
+    &__tab {
+        @extend %tabs-tab;
+    }
+
+    &__tab--selected {
+        @extend %tabs-tab--selected;
+    }
+
+    &__tab-panel--selected {
+        @extend %tabs-panel;
+    }
+}
+
+*::-webkit-scrollbar {
+    width: $sidebar-scrollbar-width;
+}
+
+*::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 $sidebar-scrollbar-width rgba($color-black, 0.3);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: $color-grey;
+}
+
+.clamp-line {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.clamp-line-1 {
+    -webkit-line-clamp: 1;
+}
+
+.clamp-line-2 {
+    -webkit-line-clamp: 2;
+}
+
+.clamp-line-3 {
+    -webkit-line-clamp: 3;
+}
+
+.clamp-line-4 {
+    -webkit-line-clamp: 4;
+}

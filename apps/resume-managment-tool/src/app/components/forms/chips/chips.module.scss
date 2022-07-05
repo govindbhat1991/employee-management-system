@@ -1,0 +1,60 @@
+@import 'components';
+
+.chips {
+    &__form-field {
+        @extend %form-field;
+    }
+
+    &__input-field {
+        @extend %input-field;
+        @extend %chips-input-field;
+
+        &.focus {
+            @extend %input-field-focus;
+        }
+
+        &.error {
+            @extend %input-field-error;
+        }
+
+        & ~ label {
+            @extend %input-field-label;
+        }
+
+        &.focus ~ label,
+        &.filled ~ label {
+            @extend %input-field-filled-focus-label;
+        }
+
+        &.focus ~ label {
+            @extend %input-field-filled-label;
+        }
+
+        &.disabled ~ label {
+            @extend %input-field-disabled-label;
+        }
+    }
+
+    &__token {
+        @extend %chips-token;
+    }
+
+    &__token-remove {
+        @extend %chips-token-remove;
+    }
+
+    &__token-label {
+        &--click {
+            @extend %chips-token-label-click;
+        }
+    }
+
+    &__token-input-wrap {
+        flex: 1;
+    }
+
+    &__token-input {
+        @extend %input-field-normalize;
+        @extend %chips-token-input;
+    }
+}

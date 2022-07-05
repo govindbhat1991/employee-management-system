@@ -1,0 +1,65 @@
+$chips-token-font-size: $font-size-sm;
+$chips-token-bg: $color-grey-lightest;
+$chips-token-color: $color-blue;
+
+$chips-remove-icon-size: 16px;
+$chips-remove-icon-border-color: $chips-token-color;
+
+%chips-input-field {
+    display: flex;
+    align-items: flex-end;
+    user-select: none;
+    flex-wrap: wrap;
+    padding-bottom: 0;
+}
+
+%chips-token {
+    display: flex;
+    align-items: center;
+    font-size: $chips-token-font-size;
+    padding: $space-xs $space-sm;
+    background: $chips-token-bg;
+    color: $chips-token-color;
+    border-radius: 0.4em;
+    line-height: 1.15;
+    flex: 0 0 auto;
+    margin-bottom: $space-xs;
+
+    &:not(:last-child) {
+        margin-right: $space-md;
+    }
+}
+
+// replace with proper icon
+%chips-token-remove {
+    margin-left: $space-sm;
+    width: $chips-remove-icon-size;
+    height: $chips-remove-icon-size;
+    line-height: 0.25;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid $chips-remove-icon-border-color;
+    font-size: $font-size-sm;
+    padding: 0;
+    background: none;
+    color: $chips-remove-icon-border-color;
+
+    &:not(:disabled):hover {
+        border: 1px solid $chips-remove-icon-border-color;
+    }
+}
+
+%chips-token-label-click {
+    cursor: pointer;
+}
+
+%chips-token-input {
+    min-width: 2em;
+    width: 100%;
+    flex: 1 1 auto;
+    display: inline-flex;
+    margin-bottom: $space-xs;
+    padding: $space-xs 0;
+}

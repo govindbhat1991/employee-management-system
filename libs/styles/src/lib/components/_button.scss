@@ -1,0 +1,71 @@
+$button-padding-vertical: 10px;
+$button-padding-side: 20px;
+$button-font-size: $font-size-md;
+
+$button-blue-color: $color-white;
+$button-blue-bg-color: $color-blue;
+$button-blue-hover-color: $color-blue;
+$button-blue-hover-border-color: $color-blue;
+
+$button-white-color: $color-grey-dark;
+$button-white-bg-color: $color-white;
+$button-white-hover-color: $color-grey-dark;
+$button-white-hover-bg-color: $color-orange;
+
+$button-disabled-color: $color-grey;
+$button-disabled-bg-color: $color-grey-light;
+
+%button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+
+    &[disabled] {
+        pointer-events: none;
+    }
+}
+
+%btn {
+    text-decoration: none;
+    display: inline-flex;
+    font-size: $button-font-size;
+    font-family: $primary-font;
+    font-weight: normal;
+    line-height: 1.2;
+    text-align: center;
+    padding: #{$button-padding-vertical} #{$button-padding-side};
+    transition: background-color 0.3s ease-out, color 0.3s ease-out, border-color 0.3s ease-out;
+    border-radius: 1em;
+
+    &[disabled] {
+        color: $button-disabled-color;
+        background-color: $button-disabled-bg-color;
+    }
+}
+
+%btn--blue {
+    color: $button-blue-color;
+    background-color: $button-blue-bg-color;
+    border: 2px solid transparent;
+
+    &:not(:disabled):hover {
+        color: $button-blue-hover-color;
+        background-color: transparent;
+        border: 2px solid $button-blue-hover-border-color;
+    }
+}
+
+%btn--grey {
+    color: $button-white-color;
+    background-color: $button-white-bg-color;
+
+    &:not(:disabled):hover {
+        color: $button-white-hover-color;
+        background-color: $button-white-hover-bg-color;
+    }
+}
+
+%btn--full-width {
+    display: block;
+    width: 100%;
+}

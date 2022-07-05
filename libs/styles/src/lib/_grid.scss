@@ -1,0 +1,156 @@
+@use 'sass:math';
+
+.row {
+    margin: 0 -#{$space-lg};
+    display: flex;
+    flex-wrap: wrap;
+
+    &--align-center {
+        align-items: center;
+    }
+
+    &--justify-center {
+        justify-content: center;
+    }
+
+    &--justify-between {
+        justify-content: space-between;
+    }
+
+    &--justify-around {
+        justify-content: space-around;
+    }
+}
+
+@for $i from 1 through $grid-columns {
+    .col-#{$i} {
+        padding: 0 $space-lg;
+        flex: 0 0 #{math.div(100%, math.div($grid-columns, $i))};
+        max-width: #{math.div(100%, math.div($grid-columns, $i))};
+    }
+}
+
+// Margin class, @TODO need to generate later
+.margin-top-xxs {
+    margin-top: $space-xxs;
+}
+.margin-top-xs {
+    margin-top: $space-xs;
+}
+.margin-top-sm {
+    margin-top: $space-sm;
+}
+.margin-top {
+    margin-top: $space;
+}
+.margin-top-md {
+    margin-top: $space-md;
+}
+.margin-top-lg {
+    margin-top: $space-lg;
+}
+.margin-top-xl {
+    margin-top: $space-xl;
+}
+.margin-top-xxl {
+    margin-top: $space-xxl;
+}
+.margin-top-hg {
+    margin-top: $space-hg;
+}
+.margin-top-xhg {
+    margin-top: $space-xhg;
+}
+
+.margin-right-xxs {
+    margin-right: $space-xxs;
+}
+.margin-right-xs {
+    margin-right: $space-xs;
+}
+.margin-right-sm {
+    margin-right: $space-sm;
+}
+.margin-right {
+    margin-right: $space;
+}
+.margin-right-md {
+    margin-right: $space-md;
+}
+.margin-right-lg {
+    margin-right: $space-lg;
+}
+.margin-right-xl {
+    margin-right: $space-xl;
+}
+.margin-right-xxl {
+    margin-right: $space-xxl;
+}
+.margin-right-hg {
+    margin-right: $space-hg;
+}
+.margin-right-xhg {
+    margin-right: $space-xhg;
+}
+
+.margin-left-xxs {
+    margin-left: $space-xxs;
+}
+.margin-left-xs {
+    margin-left: $space-xs;
+}
+.margin-left-sm {
+    margin-left: $space-sm;
+}
+.margin-left {
+    margin-left: $space;
+}
+.margin-left-md {
+    margin-left: $space-md;
+}
+.margin-left-lg {
+    margin-left: $space-lg;
+}
+.margin-left-xl {
+    margin-left: $space-xl;
+}
+.margin-left-xxl {
+    margin-left: $space-xxl;
+}
+.margin-left-hg {
+    margin-left: $space-hg;
+}
+.margin-left-xhg {
+    margin-left: $space-xhg;
+}
+
+.margin-bottom-xxs {
+    margin-bottom: $space-xxs;
+}
+.margin-bottom-xs {
+    margin-bottom: $space-xs;
+}
+.margin-bottom-sm {
+    margin-bottom: $space-sm;
+}
+.margin-bottom {
+    margin-bottom: $space;
+}
+.margin-bottom-md {
+    margin-bottom: $space-md;
+}
+.margin-bottom-lg {
+    margin-bottom: $space-lg;
+}
+.margin-bottom-xl {
+    margin-bottom: $space-xl;
+}
+.margin-bottom-xxl {
+    margin-bottom: $space-xxl;
+}
+.margin-bottom-hg {
+    margin-bottom: $space-hg;
+}
+.margin-bottom-xhg {
+    margin-bottom: $space-xhg;
+}

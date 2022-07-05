@@ -1,0 +1,12 @@
+@use 'sass:math';
+
+$resume-width: 2480px;
+$resume-height: 3508px;
+$resume-height-aspect-ratio: math.div($resume-height, $resume-width);
+
+$resume-container-width: (
+    'small': math.div($resume-width, 3),
+    'normal': math.div($resume-width, 2),
+    'large': math.div($resume-width, 1.5),
+    'huge': $resume-width,
+);

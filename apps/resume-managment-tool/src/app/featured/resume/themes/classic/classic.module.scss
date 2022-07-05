@@ -1,0 +1,140 @@
+@use 'sass:math';
+
+@import 'variables';
+@import 'components';
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+
+$resume-page-padding-top: $resume-height-aspect-ratio * 100%;
+
+.resume {
+    &__page {
+        width: 100%;
+        padding-top: $resume-page-padding-top;
+        position: relative;
+        background-color: $color-white;
+        font-size: 1em;
+        line-height: 1.75em;
+        color: #000;
+        font-family: 'Open Sans', sans-serif;
+
+        &:not(:last-child) {
+            margin-bottom: $space-lg;
+        }
+    }
+
+    &__page-content-wrap {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    // @TODO testing
+    &__page-content,
+    &__page-header {
+        background-color: #fff;
+    }
+
+    &__page-content {
+        padding: 0px 40px 40px;
+    }
+
+    &__page-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        pointer-events: none;
+    }
+
+    &__page-footer {
+        font-size: 0.75em;
+        color: #737373;
+        background-color: #c9c9c9;
+        padding: 10px;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-top: auto;
+        margin-bottom: 12px;
+    }
+
+    &__page-header-bg,
+    &__page-header-logo {
+        flex: 0 0 33%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__page-content-inner {
+        padding: 0 16px;
+    }
+
+    &__heading {
+        font-size: 2.75em;
+        margin-bottom: 50px;
+        margin-top: 10px;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-align: center;
+        line-height: 1.5em;
+    }
+
+    &__sub-heading {
+        font-size: 1.4em;
+        background: #f4f4f4;
+        padding: 8px 16px;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-bottom: 24px;
+        margin-top: 30px;
+    }
+
+    &__small-heading {
+        font-weight: bold;
+        color: #616161;
+        display: inline-block;
+        margin-right: 6px;
+    }
+
+    &__projects-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__color-grey {
+        color: #434343;
+    }
+
+    &__list {
+        color: #434343;
+
+        li {
+            position: relative;
+            padding-left: 34px;
+            line-height: 1.75em;
+
+            &:before {
+                position: absolute;
+                content: '';
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background: #434343;
+                left: 12px;
+                top: 12px;
+            }
+        }
+    }
+
+    &__content-divider {
+        border-top: 1px dashed #cccccc;
+        display: block;
+    }
+}

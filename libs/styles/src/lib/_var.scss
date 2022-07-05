@@ -1,0 +1,90 @@
+// Fonts
+$sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+// Defined in typography
+$ptsans: 'PT Sans';
+
+$primary-font: $ptsans;
+
+// COLORS
+$color-white: #ffffff;
+$color-white-dark: #f2f5f9;
+
+$color-black: #262433;
+
+$color-blue: #255ed6;
+
+$color-grey-lightest: #eff1f7;
+$color-grey-light: #e7e7e7;
+$color-grey: #ababb1;
+$color-grey-dark: #7a7982;
+$color-grey-darkest: #605f6b;
+
+$color-green: #6fcf97;
+
+$color-orange: #ef994a;
+
+$color-base: $color-black;
+
+$body-bg-color: $color-grey-lightest;
+
+$text-color: (
+    black: $color-black,
+    white: $color-white,
+    blue: $color-blue,
+    grey: $color-grey,
+    grey-dark: $color-grey-dark,
+    grey-darkest: $color-grey-darkest,
+    green: $color-green,
+    orange: $color-orange,
+);
+
+// Font Size
+$font-size-xxs: 10px;
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size: 16px;
+$font-size-md: 18px;
+$font-size-lg: 24px;
+$font-size-xl: 32px;
+$font-size-xxl: 36px;
+$font-size-huge: 48px;
+
+// heading font sizes
+$page-heading-font-size: $font-size-xxl;
+$section-heading-font-size: $font-size-xl;
+$sub-heading-font-size: $font-size-lg;
+$small-heading-font-size: $font-size-md;
+
+// top header height
+$header-height: 100px;
+
+// grid configs
+$gutter: 8px;
+
+$containers-max-width: 1184px;
+
+$enable-container: true;
+
+//total number of grid columns
+$grid-columns: 12;
+
+// spaces
+$space-xxs: 2px;
+$space-xs: 4px;
+$space-sm: 6px;
+$space: 8px;
+$space-md: 12px;
+$space-lg: 16px;
+$space-xl: 20px;
+$space-xxl: 24px;
+$space-hg: 32px;
+$space-xhg: 64px;
+
+// z-index configs
+$z-index: (
+    modal: 200,
+    header: 100,
+    navigation: 90,
+);

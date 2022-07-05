@@ -1,0 +1,26 @@
+@import 'variables';
+
+.projects-form {
+    padding-bottom: $space-lg;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+
+    &__input {
+        flex: 1;
+    }
+
+    &__btn {
+        margin-left: $space-lg;
+        padding: 0px $space-xs;
+        border-radius: 0.75em;
+        font-size: $font-size-sm;
+
+        &--add {
+            font-size: $font-size-md;
+            line-height: 1em;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/api-interfaces/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/api-interfaces/**/*.ts"]
+      }
+    },
+    "generate": {
+      "builder": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "npx graphql-codegen --config libs/api-interfaces/codegen.yml"
+          }
+        ]
+      }
+    }
+  },
+  "tags": []
+}

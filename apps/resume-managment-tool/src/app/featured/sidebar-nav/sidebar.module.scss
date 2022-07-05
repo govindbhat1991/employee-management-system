@@ -1,0 +1,57 @@
+@import 'variables';
+
+$sidebar-icon-width: 36px;
+$sidebar-min-width: 240px;
+
+.sidebar-nav {
+    $root: &;
+
+    padding: $space-hg $space-xhg $space-hg $space-hg;
+    height: 100%;
+    background-color: $color-white;
+    border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    min-width: $sidebar-min-width;
+
+    &__list {
+        margin-top: $space-xxl;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        font-size: $font-size-md;
+        color: $color-grey-darkest;
+        padding: $space-lg 0;
+
+        &.active {
+            color: $color-blue;
+
+            #{$root}__link-icon {
+                fill: $color-blue;
+                stroke: $color-blue;
+            }
+        }
+    }
+
+    &__link-icon {
+        margin-right: $space-lg;
+        max-width: $sidebar-icon-width;
+        flex: 0 0 $sidebar-icon-width;
+        fill: $color-grey-darkest;
+        stroke: $color-grey-darkest;
+
+        &--dashboard {
+            // fixing svg spacing issue
+            flex: 0 0 40px;
+            margin-bottom: -6px;
+            margin-left: -4px;
+        }
+
+        &--resume {
+            // fixing svg spacing issue
+            flex: 0 0 38px;
+            margin-left: -3px;
+        }
+    }
+}

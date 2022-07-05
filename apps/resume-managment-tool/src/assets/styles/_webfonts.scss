@@ -1,0 +1,21 @@
+$font-path: './assets/fonts/';
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('#{$font-path}/PTSans-Bold.woff2') format('woff2'),
+        url('#{$font-path}/PTSans-Bold.woff') format('woff'),
+        url('#{$font-path}/PTSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('#{$font-path}/PTSans-Regular.woff2') format('woff2'),
+        url('#{$font-path}/PTSans-Regular.woff') format('woff'),
+        url('#{$font-path}/PTSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

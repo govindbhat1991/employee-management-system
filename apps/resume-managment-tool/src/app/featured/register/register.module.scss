@@ -1,0 +1,14 @@
+.control {
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  input {
+    height: 32px;
+    width: 400px;
+  }
+}
+
+.button {
+  padding: 8px 16px;
+}

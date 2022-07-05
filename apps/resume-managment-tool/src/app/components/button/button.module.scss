@@ -1,0 +1,21 @@
+@import 'components';
+
+.button {
+    @extend %button;
+}
+
+.btn {
+    @extend %btn;
+
+    &--blue {
+        @extend %btn--blue;
+    }
+
+    &--grey {
+        @extend %btn--grey;
+    }
+
+    &--full-width {
+        @extend %btn--full-width;
+    }
+}

@@ -1,0 +1,9 @@
+@import 'variables';
+
+.img-dummy {
+    display: block;
+    width: 114px;
+    height: 114px;
+    border-radius: 50%;
+    background-color: $color-grey-lightest;
+}

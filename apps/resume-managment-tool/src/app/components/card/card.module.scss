@@ -1,0 +1,31 @@
+@import 'variables';
+
+.card {
+    background-color: $color-white;
+    padding: $space-xxl;
+    border-radius: 1em;
+
+    & > * {
+        &:not(:last-child) {
+            margin-bottom: $space-lg;
+        }
+    }
+
+    &__header {
+        display: flex;
+    }
+
+    &__actions {
+        margin-left: auto;
+    }
+
+    &__action-btn {
+        &:not(:last-child) {
+            margin-right: $space;
+        }
+    }
+
+    &__content {
+        height: 100%;
+    }
+}

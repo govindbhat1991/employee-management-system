@@ -1,0 +1,12 @@
+@import 'variables';
+
+.main {
+    width: 100%;
+    flex: 1;
+    padding: 0 $space-hg $space-hg;
+    overflow-y: auto;
+
+    &__content {
+        height: calc(100% - #{$header-height});
+    }
+}

@@ -1,0 +1,33 @@
+@import 'components';
+
+.sidebar {
+    @extend %sidebar;
+
+    &--position-left {
+        @extend %sidebar-left;
+    }
+
+    &--position-right {
+        @extend %sidebar-right;
+    }
+
+    &--show {
+        @extend %sidebar-show;
+    }
+
+    &__overlay {
+        @extend %sidebar-overlay;
+    }
+
+    &__header {
+        @extend %sidebar-header;
+    }
+
+    &__header-button {
+        @extend %sidebar-header-button;
+    }
+
+    &__content {
+        @extend %sidebar-content;
+    }
+}

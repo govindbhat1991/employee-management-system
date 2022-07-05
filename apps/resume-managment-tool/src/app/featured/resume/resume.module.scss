@@ -1,0 +1,44 @@
+@import 'variables';
+@import 'components';
+
+.resume {
+    &__card-header {
+        margin-bottom: $space-lg;
+    }
+
+    &__card-header-content {
+        display: flex;
+        align-items: center;
+    }
+
+    &__card-header-btn {
+        margin-left: auto;
+    }
+
+    &__container {
+        width: 100%;
+        margin: 0 auto;
+
+        &--small {
+            max-width: map-get($resume-container-width, small);
+        }
+
+        &--normal {
+            max-width: map-get($resume-container-width, normal);
+        }
+
+        &--large {
+            max-width: map-get($resume-container-width, large);
+        }
+
+        &--huge {
+            max-width: map-get($resume-container-width, huge);
+        }
+    }
+
+    &__tile {
+        &:not(:last-child) {
+            margin-bottom: $space-lg;
+        }
+    }
+}
